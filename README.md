@@ -1,8 +1,8 @@
 # VirtualBox Lab Setup
 
-This repo contains automation for a faster standup of a Ubuntu virtualization server PC. This has been tested on Ubuntu Linux 20.10 on both a physical PC and a VirtualBox VM.
+This tool sets up an Ubuntu Linux Desktop virtualization server PC. 
 
-## What does this do
+## Summary
 
 - Changes desktop and terminal color preferences
 - Installs:
@@ -10,13 +10,11 @@ This repo contains automation for a faster standup of a Ubuntu virtualization se
   - Vim
   - Curl
   - VirtualBox
-  - Git
   - Microsoft Visual Studio Code
-  - 
 - Sets favorite apps on Ubuntu Desktop
 - Configures a few XRDP settings to avoid issues
 
-## How to use
+## Usage
 
 ### Physical PC
 
@@ -37,13 +35,16 @@ Here's a beginner-friendly breakdown of how to use this tool, assuming you've pu
 1. `git clone https://github.com/lee5378/labsetup.git`
 1. `bash ~/github/labsetup/labsetup.sh` executes the tool. Note that you should NOT run with `sudo` as the script privilege escalates on a per-command basis.
 
-You may encounter a GRUB complaint that manifests as a graphical warning screen. Just hit Enter and bypass it.
+Budget an hour to keep an eye on the script execution and keep it moving. You may encounter occasional prompts for superuser password or to press OK/Enter to proceed. This is normal, because several processes have not been fully automated yet.
 
 ### Virtual Machine
 
-If you're using this on a VM just skip steps 1-5 and start on step 6 above.
+If you're using this on a VM just skip steps 1-5 and start on step 6 above. 
 
-## Resources
+## Testing
 
-- [AWS Security Blog: What is a cyber range and how do you build one on AWS?](https://aws.amazon.com/blogs/security/what-is-cyber-range-how-do-you-build-one-aws/)
-  - You may alternatively wish to host these systems on AWS as EC2 instances. 
+This has been tested on Ubuntu Linux 20.10 on both a physical PC and a VirtualBox VM.
+
+## Contributions
+
+PRs are welcome, please review open issues first.

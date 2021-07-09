@@ -19,7 +19,7 @@ touch deployerlog.txt
 
 sudo apt update
 sudo apt-get update
-sudo apt upgrade
+sudo apt upgrade -y
 
 # Install Open SSH Server, allow firewall, and launch the service on startup
 sudo apt-get install openssh-server

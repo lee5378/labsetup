@@ -22,7 +22,7 @@ sudo apt-get update
 sudo apt upgrade -y
 
 # Install Open SSH Server, allow firewall, and launch the service on startup
-sudo apt-get install openssh-server
+sudo apt-get install openssh-server -y
 sudo systemctl start sshd
 sudo ufw allow ssh
 sudo systemctl enable ssh
@@ -37,18 +37,6 @@ curl --version >> ~/Downloads/deployerlog.txt
  
 # Install Virtalbox 
 install-virtualbox
-
-# Install GNS3
-sudo add-apt-repository ppa:gns3/ppa
-sudo apt install gns3-server gns3-gui -y
-echo "Press Yes for both the next prompts"
-gns3 --version >> ~/Downloads/deployerlog.txt
-sudo usermod -aG kvm $(whoami)
-sudo apt install xtightvncviewer -y
-
-# Install Git
-sudo apt install git -y
-git --version >> ~/Downloads/deployerlog.txt
 
 # Install VS Code
 sudo apt install software-properties-common apt-transport-https wget -y
